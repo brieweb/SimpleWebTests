@@ -5,19 +5,28 @@
  */
 package com.johnnycarlos;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 public class CraigslistSearch {
     
 	private static WebDriver driver;
-        
+    private static WebElement element;
+    
 	public static void main(String[] args) {
 		
         driver = new FirefoxDriver();
 		
-        driver.get("http://www.craigslist.com");
+        driver.get("http://sacramento.craigslist.org/sss/");
 		
+        element = driver.findElement(By.id("query"));
+        
+        element.sendKeys("dungeons dragons");
+        
+    
 
 	}
 
