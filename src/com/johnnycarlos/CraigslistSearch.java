@@ -20,15 +20,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-
-
-
-
-
 public class CraigslistSearch {
     
 	private static WebDriver driver;
-    private static WebElement element;
+	private static WebElement element;
     
 	public static void main(String[] args) {
 		
