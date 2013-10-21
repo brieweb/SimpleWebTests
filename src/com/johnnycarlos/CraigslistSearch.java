@@ -16,14 +16,12 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class CraigslistSearch {
     
-	private static WebDriver driver;
-	private static WebElement element;
+    private static WebDriver driver;
+    private static WebElement element;
     
 	public static void main(String[] args) {
 		
@@ -37,6 +35,7 @@ public class CraigslistSearch {
 		
         element = driver.findElement(By.id("query"));       
         
+        //TODO: get this from args
         element.sendKeys("dungeons dragons");
         
         element.submit();
@@ -48,8 +47,10 @@ public class CraigslistSearch {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-   
-
+        
+        // Example of storing the html source code
+        //String html = driver.getPageSource();
+        
 	}
 
 }
