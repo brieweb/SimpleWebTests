@@ -21,7 +21,13 @@ public class TwitterTests {
 	    driver.get("http://www.twitter.com");
 	        
 	    driver.manage().window().maximize();
-			
+		
+	    element = driver.findElement(By.id("signin-email"));
+	    
+	    element.sendKeys("johnnycarlos@gmail.com");
+	    
+	    // put email and password as args
+ 
     }
 	
 }
