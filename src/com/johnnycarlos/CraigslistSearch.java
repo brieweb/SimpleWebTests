@@ -1,7 +1,8 @@
 /**
  * This purpose of class is mainly for me to learn Selenium WebDriver.  I 
- * will use it to run queries to craigslist.com.  (I realize there are 
- * better ways to do this, but that would not teach me about Selenium.
+ * will use it to run queries to craigslist.com as a simple example.  
+ * (I realize there are better ways to do this, but that would not teach 
+ * me about Selenium.
  */
 package com.johnnycarlos;
 
