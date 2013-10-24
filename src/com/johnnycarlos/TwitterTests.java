@@ -1,5 +1,5 @@
 /**
- * 
+ * A simple class to connect and log into Twitter using Selenium.
  */
 
 package com.johnnycarlos;
@@ -24,7 +24,7 @@ public class TwitterTests {
     	
     	start();
     
-    	//end();
+    	end();
 	    
     }
 
@@ -32,21 +32,18 @@ public class TwitterTests {
 		
 	    driver = new FirefoxDriver();
         
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			
 	    driver.get("http://www.twitter.com");
 	        
 	    driver.manage().window().maximize();
 		
-	    element = driver.findElement(By.id("signin-email"));
+	    driver.findElement(By.id("signin-email")).sendKeys(username);
 	    
-	    element.sendKeys(username);
-	    
-	    element = driver.findElement(By.id("signin-password"));
-	    
-	    element.sendKeys(password);
+	    driver.findElement(By.id("signin-password")).sendKeys(password);
 
-		
+	    driver.findElement(By.xpath("//button[@class='submit btn primary-btn flex-table-btn js-submit']")).click();
+	  
 	}
 
 	private static void checkArgs(String[] args) {
